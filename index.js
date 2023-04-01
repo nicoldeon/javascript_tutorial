@@ -76,4 +76,14 @@ function iterate_over() {
 /*
     CLONE AN ELEMENT
 */
+function cloneElement() {
+    const element = document.getElementById('new_body');
+    //clone that element
+    //const cloneElement = element.cloneNode();
+    //clone  that element and its descendants
+    const cloneElement = element.cloneNode(true);
 
+    const new_ele = document.getElementById('clone_body');
+    new_ele.innerHTML = cloneElement.innerHTML;
+
+}
