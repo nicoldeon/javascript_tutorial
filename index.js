@@ -28,7 +28,6 @@ function getTextContent() {
     const el = document.querySelector('#container');
     console.log(el);
 }
-getTextContent();
 
 function setTextContent() {
     const el = document.querySelector('#container');
@@ -37,4 +36,23 @@ function setTextContent() {
         or el.innerText = '';
     */
 }
-setTextContent();
+
+/*
+    GET SET CONTENT HTML ELEMENT
+*/
+
+function getHTMLContent() {
+    const el = document.querySelector('#container');
+    console.log(el.innerHTML); //get html content
+}
+
+function setHTMLContent() {
+    const el = document.querySelector('#container');
+    el.innerHTML = `
+        <h1>WELCOME TO THIS PAGE</h1>
+    `;
+}
+
+/*
+    
+*/
