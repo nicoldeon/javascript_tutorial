@@ -28,7 +28,6 @@ function getTextContent() {
     const el = document.querySelector('#container');
     console.log(el);
 }
-getTextContent();
 
 function setTextContent() {
     const el = document.querySelector('#container');
@@ -37,4 +36,54 @@ function setTextContent() {
         or el.innerText = '';
     */
 }
-setTextContent();
+
+/*
+    GET SET CONTENT HTML ELEMENT
+*/
+
+function getHTMLContent() {
+    const el = document.querySelector('#container');
+    console.log(el.innerHTML); //get html content
+}
+
+function setHTMLContent() {
+    const el = document.querySelector('#container');
+    el.innerHTML = `
+        <h1>WELCOME TO THIS PAGE</h1>
+    `;
+}
+
+/*
+    iterate over seleted element
+*/
+
+function iterate_over() {
+    const notes = document.querySelectorAll('#container');
+    notes.forEach((note) => {
+        note.style.backgroundColor = "green";
+    })
+    /*
+        const notes = document.querySelectorAll('.note');
+        const count = notes.length;
+
+        for (let i = 0; i < count; i++) {
+            notes[i].style.backgroundColor = "yellow";
+        }
+    */
+}
+
+
+/*
+    CLONE AN ELEMENT
+*/
+function cloneElement() {
+    const element = document.getElementById('new_body');
+    //clone that element
+    //const cloneElement = element.cloneNode();
+    //clone  that element and its descendants
+    const cloneElement = element.cloneNode(true);
+
+    const new_ele = document.getElementById('clone_body');
+    new_ele.innerHTML = cloneElement.innerHTML;
+
+}
