@@ -54,5 +54,26 @@ function setHTMLContent() {
 }
 
 /*
-    
+    iterate over seleted element
 */
+
+function iterate_over() {
+    const notes = document.querySelectorAll('#container');
+    notes.forEach((note) => {
+        note.style.backgroundColor = "green";
+    })
+    /*
+        const notes = document.querySelectorAll('.note');
+        const count = notes.length;
+
+        for (let i = 0; i < count; i++) {
+            notes[i].style.backgroundColor = "yellow";
+        }
+    */
+}
+
+
+/*
+    CLONE AN ELEMENT
+*/
+
