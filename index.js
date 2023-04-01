@@ -87,3 +87,24 @@ function cloneElement() {
     new_ele.innerHTML = cloneElement.innerHTML;
 
 }
+
+/*
+    insert before and after selected node
+*/
+function insertBefore(newNode, existingNode) {
+    existingNode.parentNode.insertBefore(newNode, existingNode);
+}
+
+function insertAfter(newNode, existingNode) {
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+
+function showInsert() {
+    let menu = document.getElementById('menu');
+
+    let li = document.createElement('li');
+    li.textContent = 'Hello world';
+
+    menu.insertBefore(li, menu.firstElementChild);
+}
+
