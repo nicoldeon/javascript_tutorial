@@ -108,3 +108,19 @@ function showInsert() {
     menu.insertBefore(li, menu.firstElementChild);
 }
 
+/*
+    remove dom element
+*/
+function removeElement() {
+    // select the target element
+    const e = document.querySelector("li:last-child");
+    // remove the last list item
+    e.parentElement.removeChild(e);
+    //or e.remove();
+    /*
+        hide element:
+        e.style.display = 'none';
+
+    */
+}
+removeElement();
